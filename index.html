@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myFirstApp">
   <head>
     <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+    .box{
+      background-color: lightgrey;
+        width: 200px;
+        border: 2px solid green;
+        padding: 25px;
+        margin: 25px;
+        text-align: center;
+    }
+    </style>
     <title>Hello coursera</title>
   </head>
   <body>
-  <h1> hi srinanda girl</h1>  
+    <h2>Healthy Lunch Checker</h2>
+  <div ng-controller="MyFirstController">
+ <input type="text" ng-model="name" placeholder="Type Your lunch">
+ {{name}}
+ <div>
+   <br>
+   <button ng-click="countMenu()">Check if too much</button>
+   <div id="welcomeDiv"  style="display:none"class="box">
+     <br>
+   {{message}}
+ </div>
+  </div>
   </body>
 </html>
+
